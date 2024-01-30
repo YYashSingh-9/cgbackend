@@ -17,6 +17,8 @@ app.use(
     methods: ["PATCH", "GET", "PUT", "POST", "HEAD", "DELETE"],
   })
 );
+// serving static files
+app.use(express.static(path.join(__dirname, "public")));
 
 //1. body parser
 app.use(express.json());
